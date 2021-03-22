@@ -1,0 +1,30 @@
+Hola,Hello
+Adiós,Goodbye
+Por favor,Please
+Gracias,Thank you
+Lo siento,Sorry
+Salud,Bless you
+Sí,Yes
+No,No
+¿Quién?,Who?
+¿Qué?,What?
+¿Por qué?,Why?
+¿Dónde?,Where?
+¿Qué tal?,How are you?
+¿Qué pasa?,What's up?
+¿Cómo te va?,How are you doing?
+Bien,Good
+Muy bien,Very good
+Así así,So-so
+No tan bien,Not so good
+¿Y tú?,And you?
+Me llamo,My name is
+¿Cómo te llamas?,What is your name?
+Mucho gusto,Nice to meet you
+Placér,A pleasure
+Nos vemos mañana,See you tomorrow
+Hasta luego,See you later
+Hasta pronto amigo,See you soon friend
+¿Qué te gusta hacer?,What do you like to do?
+¿Cuáles son tus pasatiempos?,What are your hobbies?
+¿Qué haces en tu tiempo libre?,What do you do in your free time?

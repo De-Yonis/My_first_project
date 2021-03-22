@@ -1,38 +1,54 @@
 import random
 
-response = input(
-    "Welcome Yonis to the spanish quiz type Yes below to start \n: ")
-while response == "Yes":
-    VocabD = {"Hola": "Hello", "Adiós": "Goodbye", "Por favor": "Please",
-              "Gracias": "Thank you", "Lo siento": "Sorry", "Salud": "Bless you",
-              "Sí": "Yes", "No": "No", "¿Quién?": "Who?", "¿Qué?": "What?",
-              "¿Por qué?": "Why?", "¿Dónde?": "Where?"
-              }
+def vocab_file():
+    VocabD = {}
+    with open("spanish.txt") as f:
+        for line in f:
+            (key, value) = line.split(",")
+            VocabD[key] = value.rstrip()
+    return VocabD
 
-    question_list = list(VocabD.keys())  
 
+def game():
+    response = input("Type Yes below to start:\n").lower()
+    if response == "yes":
+        VocabD = vocab_file()
+        question_list = list(VocabD.keys())
+       
+        
+        random.shuffle(question_list)
+        correct = 0
+        wrong = 0
     
-    random.shuffle(question_list)
-    correct = 0
-    wrong = 0
+        for word in question_list:
+            presented = "{}"
+            print(" ")  
+            print(presented.format(word))
+            inputAnswer = input("Answer: ").capitalize()
 
-    for words in question_list:
-        presented = "{}"
-        print(presented.format(words))
-        inputAnswer = input("Answer: ")
+            if inputAnswer == (VocabD[word]):
+                print("Great, thats correct \n")
+                correct += 1
+            else:
+                print("Wrong mate")
+                print("The correct answer is", VocabD[word])
+                wrong += 1
+
+        tally = "You have {} Correct and {} Wrong"
         print(" ")
-
-        if inputAnswer == (VocabD[words]):
-            print("Great, thats correct")
-            correct += 1
+        print(tally.format(correct, wrong))
+        repeat = input("Shall we go again?:\n ").lower()
+        if repeat == "Yes":
+            again()
         else:
-            print("Wrong mate")
-            print(("The correct answer is - '{}'").format(VocabD[words]))
-            wrong += 1
+            print("See you later")
+    else:
+        print("See you later")
 
-    present = "{} Correct and {} Wrong"
-    print(present.format(correct, wrong))
-    response = input("Go again?")
 
-print(" ")
-print("See you later")
+def again():
+    return game()
+
+
+print("Hello and Welcome to the quiz Yonis")
+game()
