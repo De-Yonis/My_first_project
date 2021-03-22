@@ -1,4 +1,4 @@
-##A python script to help me practice my spanish. 
+A python script to help me practice my spanish. 
 
 I put spanish words as keys in the dictionaries and the meaning in english as values.
 
