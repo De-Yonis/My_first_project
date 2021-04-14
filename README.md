@@ -2,7 +2,7 @@ A python script to help practice my spanish.
 
 I put spanish words as keys in the dictionaries and the meaning in english as values.
 
-To make the game more efficient. I made an txt file where I put more words and phrases. I then wrote a function which reads through each line and separates the words into key/value pairs and puts them into a dictionary.
+To make the game more efficient, I made a txt file where I put more words and phrases. I then wrote a function which reads through each line and separates the words into key/value pairs and puts them into a dictionary.
 
 I then put all keys in a list so that I only see the spanish words. I also import the random module which shuffles the list of keys every time I start the game. 
 
